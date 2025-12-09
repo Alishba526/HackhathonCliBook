@@ -1,0 +1,1873 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Master the Future of AI in the Physical World">
+      
+      
+      
+      
+        <link rel="prev" href="../module-4-vision-language-action/1-vla-systems/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Capstone Project - Physical AI & Humanoid Robotics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capstone-project-autonomous-humanoid-with-voice-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Physical AI &amp; Humanoid Robotics" class="md-header__button md-logo" aria-label="Physical AI & Humanoid Robotics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physical AI & Humanoid Robotics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Capstone Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Alishba526/HackhathonCliBook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HackhathonCliBook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../module-1-robotic-nervous-system/" class="md-tabs__link">
+          
+  
+  
+  Module 1 - Robotic Nervous System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../module-2-digital-twin/" class="md-tabs__link">
+          
+  
+  
+  Module 2 - Digital Twin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../module-3-ai-robot-brain/" class="md-tabs__link">
+          
+  
+  
+  Module 3 - AI Robot Brain
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../module-4-vision-language-action/" class="md-tabs__link">
+          
+  
+  
+  Module 4 - Vision Language Action
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Capstone Project
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Physical AI &amp; Humanoid Robotics" class="md-nav__button md-logo" aria-label="Physical AI & Humanoid Robotics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physical AI & Humanoid Robotics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Alishba526/HackhathonCliBook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HackhathonCliBook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 1 - Robotic Nervous System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Module 1 - Robotic Nervous System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-1-robotic-nervous-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-1-robotic-nervous-system/1-ros2-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS 2 Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-1-robotic-nervous-system/2-first-ros2-node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First ROS 2 Node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-1-robotic-nervous-system/3-urdf-robot-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    URDF Robot Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 2 - Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Module 2 - Digital Twin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-2-digital-twin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-2-digital-twin/1-gazebo-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gazebo Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-2-digital-twin/2-unity-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 3 - AI Robot Brain
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Module 3 - AI Robot Brain
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-3-ai-robot-brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-3-ai-robot-brain/1-isaac-sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isaac Sim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 4 - Vision Language Action
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Module 4 - Vision Language Action
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-4-vision-language-action/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-4-vision-language-action/1-vla-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VLA Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capstone Project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capstone Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Phases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Capstone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-commands-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Commands to Try
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="capstone-project-autonomous-humanoid-with-voice-commands">Capstone Project: Autonomous Humanoid with Voice Commands</h1>
+<h2 id="project-overview">Project Overview</h2>
+<p>Build an autonomous humanoid robot that can:
+1. <strong>Listen</strong> to voice commands
+2. <strong>Understand</strong> natural language instructions
+3. <strong>Plan</strong> a sequence of actions
+4. <strong>Execute</strong> those actions in simulation
+5. <strong>Verify</strong> success using computer vision</p>
+<h3 id="final-deliverable">Final Deliverable</h3>
+<p>A simulated humanoid robot that performs complex tasks based on voice commands, demonstrating the complete Physical AI stack.</p>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────┐
+│   Voice Input (Whisper)             │ (speech → text)
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Language Understanding (GPT-4)    │ (text → action plan)
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Vision-based Verification (CLIP)  │ (verify feasibility)
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Motor Control (ROS 2)             │ (action plan → motor commands)
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Gazebo Simulation                 │ (execute in physics)
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Vision Feedback                   │ (verify task completion)
+└─────────────────────────────────────┘
+</code></pre></div>
+<h2 id="project-phases">Project Phases</h2>
+<h3 id="phase-1-setup-and-simulation-week-8-9">Phase 1: Setup and Simulation (Week 8-9)</h3>
+<h4 id="11-create-the-simulated-humanoid">1.1: Create the Simulated Humanoid</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/humanoid_sim.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">omni.isaac.kit</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationApp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">omni.isaac.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">World</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">omni.isaac.core.robots</span><span class="w"> </span><span class="kn">import</span> <span class="n">Robot</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">omni.isaac.core.utils.nucleus</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_assets_root_folder</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">HumanoidSimulator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">simulation_app</span> <span class="o">=</span> <span class="n">SimulationApp</span><span class="p">({</span><span class="s2">&quot;headless&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">stage_units_in_meters</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+        <span class="c1"># Load humanoid robot from NVIDIA&#39;s library</span>
+        <span class="n">assets_root_path</span> <span class="o">=</span> <span class="n">get_assets_root_folder</span><span class="p">()</span>
+        <span class="n">humanoid_usd</span> <span class="o">=</span> <span class="n">assets_root_path</span> <span class="o">+</span> <span class="s2">&quot;/Isaac/2023.1.1/Isaac3rdParty/NVIDIA/Humanoid_Pro/H1.usd&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+            <span class="n">Robot</span><span class="p">(</span>
+                <span class="n">prim_path</span><span class="o">=</span><span class="s2">&quot;/World/Humanoid&quot;</span><span class="p">,</span>
+                <span class="n">usd_path</span><span class="o">=</span><span class="n">humanoid_usd</span><span class="p">,</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">render</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">is_playing</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">simulation_app</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">simulator</span> <span class="o">=</span> <span class="n">HumanoidSimulator</span><span class="p">()</span>
+
+    <span class="c1"># Run simulation</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">simulator</span><span class="o">.</span><span class="n">step</span><span class="p">():</span>
+            <span class="k">break</span>
+
+    <span class="n">simulator</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="12-connect-to-ros-2">1.2: Connect to ROS 2</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create bridge between Isaac Sim and ROS 2</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Float64MultiArray</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">HumanoidBridge</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">simulator</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;humanoid_bridge&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span> <span class="o">=</span> <span class="n">simulator</span>
+
+        <span class="c1"># Subscribe to control commands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd_vel_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">Twist</span><span class="p">,</span>
+            <span class="s1">&#39;/cmd_vel&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_cmd_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">Float64MultiArray</span><span class="p">,</span>
+            <span class="s1">&#39;/joint_commands&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">joint_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">velocity_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="c1"># Convert Twist to humanoid motion</span>
+        <span class="n">linear_x</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">angular_z</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span>
+
+        <span class="c1"># Compute walking pattern</span>
+        <span class="n">joint_targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_gait</span><span class="p">(</span><span class="n">linear_x</span><span class="p">,</span> <span class="n">angular_z</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apply_joint_targets</span><span class="p">(</span><span class="n">joint_targets</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">joint_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apply_joint_targets</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute_gait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forward_speed</span><span class="p">,</span> <span class="n">turning_speed</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute bipedal walking gait&quot;&quot;&quot;</span>
+        <span class="c1"># Simplified gait computation</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">current_time</span>
+
+        <span class="n">hip_angles</span> <span class="o">=</span> <span class="n">forward_speed</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+        <span class="n">knee_angles</span> <span class="o">=</span> <span class="n">forward_speed</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">hip_angles</span><span class="p">,</span> <span class="n">knee_angles</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hip_angles</span><span class="p">,</span> <span class="n">knee_angles</span><span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_joint_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
+        <span class="c1"># Apply to simulated robot</span>
+        <span class="k">pass</span>
+</code></pre></div>
+<h3 id="phase-2-voice-to-action-pipeline-week-10">Phase 2: Voice to Action Pipeline (Week 10)</h3>
+<h4 id="21-voice-capture">2.1: Voice Capture</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/voice_interface.py</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sounddevice</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.io.wavfile</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">wavfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">VoiceInterfaceNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;voice_interface&#39;</span><span class="p">)</span>
+
+        <span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;your-api-key-here&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">command_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;/voice/command&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listening</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># Start listening thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listen_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">listen_loop</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listen_thread</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listen_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">listen_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">listening</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Record audio</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Listening...&#39;</span><span class="p">)</span>
+                <span class="n">audio</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">rec</span><span class="p">(</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="mi">16000</span> <span class="o">*</span> <span class="mi">5</span><span class="p">),</span>  <span class="c1"># 5 seconds</span>
+                    <span class="n">samplerate</span><span class="o">=</span><span class="mi">16000</span><span class="p">,</span>
+                    <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span>
+                <span class="p">)</span>
+                <span class="n">sd</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+                <span class="c1"># Save audio</span>
+                <span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;command.wav&#39;</span><span class="p">,</span> <span class="mi">16000</span><span class="p">,</span> <span class="n">audio</span><span class="p">)</span>
+
+                <span class="c1"># Transcribe with Whisper</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">transcript</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">Audio</span><span class="o">.</span><span class="n">transcribe</span><span class="p">(</span><span class="s2">&quot;whisper-1&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+                <span class="n">command</span> <span class="o">=</span> <span class="n">transcript</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Heard: </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+                    <span class="c1"># Publish command</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+                    <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">command</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">command_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">VoiceInterfaceNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="22-language-understanding">2.2: Language Understanding</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/language_planner.py</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">LanguagePlannerNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;language_planner&#39;</span><span class="p">)</span>
+
+        <span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;your-api-key-here&quot;</span>
+
+        <span class="c1"># Subscribe to voice commands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">command_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">String</span><span class="p">,</span>
+            <span class="s1">&#39;/voice/command&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">command_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Publish action plan</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plan_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;/action_plan&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">command_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Processing: </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Generate action plan</span>
+        <span class="n">plan</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_plan</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+        <span class="c1"># Publish plan</span>
+        <span class="n">plan_msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+        <span class="n">plan_msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plan_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">plan_msg</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_plan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Use GPT-4 to generate robot action plan&quot;&quot;&quot;</span>
+
+        <span class="n">system_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;You are a robot planning system. Convert natural language commands into </span>
+<span class="s2">structured robot action sequences.</span>
+
+<span class="s2">Available Actions:</span>
+<span class="s2">- move_to(x, y, z): Move arm to position</span>
+<span class="s2">- grasp(): Close gripper</span>
+<span class="s2">- release(): Open gripper  </span>
+<span class="s2">- navigate_to(x, y): Move robot base</span>
+<span class="s2">- look_at(x, y, z): Turn camera toward point</span>
+<span class="s2">- wait(seconds): Pause</span>
+
+<span class="s2">You MUST respond with valid JSON array of actions only, no other text.</span>
+<span class="s2">Example response: [{&quot;action&quot;: &quot;navigate_to&quot;, &quot;params&quot;: {&quot;x&quot;: 5, &quot;y&quot;: 0}}, {&quot;action&quot;: &quot;grasp&quot;, &quot;params&quot;: </span><span class="si">{}</span><span class="s2">}]</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Command: &quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">system_prompt</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user_prompt</span><span class="p">}</span>
+            <span class="p">],</span>
+            <span class="n">temperature</span><span class="o">=</span><span class="mf">0.3</span>
+        <span class="p">)</span>
+
+        <span class="n">response_text</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;choices&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Extract JSON if there&#39;s extra text</span>
+            <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+            <span class="n">json_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\[.*\]&#39;</span><span class="p">,</span> <span class="n">response_text</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">json_match</span><span class="p">:</span>
+                <span class="n">plan</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_match</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">plan</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response_text</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">plan</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Failed to parse plan: </span><span class="si">{</span><span class="n">response_text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">LanguagePlannerNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="phase-3-execution-and-feedback-week-11">Phase 3: Execution and Feedback (Week 11)</h3>
+<h4 id="31-action-executor">3.1: Action Executor</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/action_executor.py</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Float64MultiArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ActionExecutorNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;action_executor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Subscribe to action plans</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plan_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">String</span><span class="p">,</span>
+            <span class="s1">&#39;/action_plan&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">plan_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Control publishers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd_vel_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/cmd_vel&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arm_cmd_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Float64MultiArray</span><span class="p">,</span> <span class="s1">&#39;/joint_commands&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># Feedback publisher</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feedback_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;/execution_feedback&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">plan_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="n">plan</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">execute_plan</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">execute_plan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plan</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">action</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plan</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Executing action </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">action</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="n">action_type</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;action&#39;</span><span class="p">)</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;move_to&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">move_to_position</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">])</span>
+                <span class="k">elif</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;grasp&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">grasp</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;release&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;navigate_to&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">navigate_to</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+                <span class="k">elif</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;look_at&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">look_at</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">])</span>
+                <span class="k">elif</span> <span class="n">action_type</span> <span class="o">==</span> <span class="s1">&#39;wait&#39;</span><span class="p">:</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+                <span class="c1"># Send feedback</span>
+                <span class="n">feedback</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+                <span class="n">feedback</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;✓ Completed: </span><span class="si">{</span><span class="n">action_type</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">feedback_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">feedback</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error executing </span><span class="si">{</span><span class="n">action_type</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_to_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move arm to target position&quot;&quot;&quot;</span>
+        <span class="c1"># Compute IK and send joint commands</span>
+        <span class="n">joint_angles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_inverse_kinematics</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">Float64MultiArray</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">joint_angles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arm_cmd_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for arm to reach</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">grasp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Close gripper&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">Float64MultiArray</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">]</span>  <span class="c1"># Close</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arm_cmd_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Open gripper&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">Float64MultiArray</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>  <span class="c1"># Open</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arm_cmd_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">navigate_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Navigate robot base to position&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Forward</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># Turning</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd_vel_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">look_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Turn camera toward point&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute_inverse_kinematics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute joint angles for target position&quot;&quot;&quot;</span>
+        <span class="c1"># Simplified IK</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">angles</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">,</span>
+            <span class="mf">0.0</span>
+        <span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">angles</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">ActionExecutorNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="32-vision-feedback">3.2: Vision Feedback</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/vision_feedback.py</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sensor_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cv_bridge</span><span class="w"> </span><span class="kn">import</span> <span class="n">CvBridge</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">CLIPProcessor</span><span class="p">,</span> <span class="n">CLIPModel</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">VisionFeedbackNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;vision_feedback&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">Image</span><span class="p">,</span>
+            <span class="s1">&#39;/camera/image_raw&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">feedback_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;/vision_feedback&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># Load CLIP for understanding objects</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">CLIPProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;openai/clip-vit-base-patch32&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">CLIPModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;openai/clip-vit-base-patch32&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bridge</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">image_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="c1"># Convert ROS image to OpenCV</span>
+        <span class="n">cv_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">imgmsg_to_cv2</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s1">&#39;bgr8&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Analyze image</span>
+        <span class="n">analysis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">analyze_image</span><span class="p">(</span><span class="n">cv_image</span><span class="p">)</span>
+
+        <span class="c1"># Publish feedback</span>
+        <span class="n">feedback</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+        <span class="n">feedback</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feedback_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">feedback</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze image for task completion&quot;&quot;&quot;</span>
+
+        <span class="c1"># Prepare inputs</span>
+        <span class="n">image_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">processor</span><span class="p">(</span>
+            <span class="n">images</span><span class="o">=</span><span class="n">image</span><span class="p">,</span>
+            <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span>
+        <span class="p">)[</span><span class="s1">&#39;pixel_values&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="c1"># Check for common objects</span>
+        <span class="n">objects_to_check</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red cube&quot;</span><span class="p">,</span> <span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="s2">&quot;gripper&quot;</span><span class="p">,</span> <span class="s2">&quot;hand&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">]</span>
+
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">image_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_image_features</span><span class="p">(</span><span class="n">image_input</span><span class="p">)</span>
+
+            <span class="n">detections</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects_to_check</span><span class="p">:</span>
+                <span class="n">text_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">processor</span><span class="p">(</span>
+                    <span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;a </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+                    <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">,</span>
+                    <span class="n">padding</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+                <span class="n">text_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_text_features</span><span class="p">(</span><span class="o">**</span><span class="n">text_input</span><span class="p">)</span>
+
+                <span class="c1"># Normalize</span>
+                <span class="n">image_features_norm</span> <span class="o">=</span> <span class="n">image_features</span> <span class="o">/</span> <span class="n">image_features</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">text_features_norm</span> <span class="o">=</span> <span class="n">text_features</span> <span class="o">/</span> <span class="n">text_features</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+                <span class="c1"># Compute similarity</span>
+                <span class="n">similarity</span> <span class="o">=</span> <span class="p">(</span><span class="n">image_features_norm</span> <span class="o">@</span> <span class="n">text_features_norm</span><span class="o">.</span><span class="n">T</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="n">similarity</span> <span class="o">&gt;</span> <span class="mf">0.3</span><span class="p">:</span>
+                    <span class="n">detections</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">similarity</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">rclpy</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">nanoseconds</span><span class="p">),</span>
+            <span class="s2">&quot;objects_detected&quot;</span><span class="p">:</span> <span class="n">detections</span>
+        <span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">VisionFeedbackNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="phase-4-integration-and-testing-week-12">Phase 4: Integration and Testing (Week 12)</h3>
+<h4 id="41-main-orchestrator">4.1: Main Orchestrator</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/main_orchestrator.py</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">OrchestratorNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;orchestrator&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;idle&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_task</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Publisher for starting execution</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">execute_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;/action_plan&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># Subscriber for feedback</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feedback_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">String</span><span class="p">,</span>
+            <span class="s1">&#39;/execution_feedback&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feedback_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">voice_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">String</span><span class="p">,</span>
+            <span class="s1">&#39;/voice/command&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">voice_callback</span><span class="p">,</span>
+            <span class="mi">10</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">voice_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">🎤 Command: &quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s1">&quot;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_task</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;processing&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">feedback_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="n">feedback</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="s2">&quot;✓&quot;</span> <span class="ow">in</span> <span class="n">feedback</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  </span><span class="si">{</span><span class="n">feedback</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">OrchestratorNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="42-launch-file">4.2: Launch File</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/ros2_ws/src/autonomous_humanoid/launch/full_system.launch.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchDescription</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="c1"># Humanoid simulator</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;humanoid_sim&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;humanoid_sim&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># Voice interface</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;voice_interface&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;voice_interface&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># Language planner</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;language_planner&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;language_planner&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># Action executor</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;action_executor&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;action_executor&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># Vision feedback</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;vision_feedback&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vision_feedback&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># Orchestrator</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;autonomous_humanoid&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;orchestrator&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;orchestrator&#39;</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</code></pre></div>
+<h2 id="running-the-capstone">Running the Capstone</h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
+colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>autonomous_humanoid
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
+
+<span class="c1"># Start the entire system</span>
+ros2<span class="w"> </span>launch<span class="w"> </span>autonomous_humanoid<span class="w"> </span>full_system.launch.py
+</code></pre></div>
+<h2 id="example-commands-to-try">Example Commands to Try</h2>
+<div class="highlight"><pre><span></span><code>&quot;Move your arm to the right&quot;
+&quot;Pick up the red cube&quot;
+&quot;Walk to the table&quot;
+&quot;Look at the camera&quot;
+&quot;Open your hand&quot;
+&quot;Pick up the blue sphere and place it on the table&quot;
+</code></pre></div>
+<h2 id="evaluation-criteria">Evaluation Criteria</h2>
+<ol>
+<li><strong>Voice Recognition</strong> (20 points)</li>
+<li>Accurately captures voice commands</li>
+<li>
+<p>Robust to background noise</p>
+</li>
+<li>
+<p><strong>Language Understanding</strong> (20 points)</p>
+</li>
+<li>Correctly parses natural language</li>
+<li>
+<p>Handles complex multi-step tasks</p>
+</li>
+<li>
+<p><strong>Execution</strong> (30 points)</p>
+</li>
+<li>Actions execute smoothly in simulation</li>
+<li>Proper sequencing of tasks</li>
+<li>
+<p>Error handling</p>
+</li>
+<li>
+<p><strong>Vision Integration</strong> (20 points)</p>
+</li>
+<li>Provides real-time feedback</li>
+<li>
+<p>Verifies task completion</p>
+</li>
+<li>
+<p><strong>Code Quality</strong> (10 points)</p>
+</li>
+<li>Well-documented</li>
+<li>Modular design</li>
+<li>Error handling</li>
+</ol>
+<h2 id="bonus-features">Bonus Features</h2>
+<ul>
+<li><strong>Advanced Gait</strong>: Implement realistic bipedal walking</li>
+<li><strong>Obstacle Avoidance</strong>: Navigate around objects</li>
+<li><strong>Multi-Robot Coordination</strong>: Control multiple robots</li>
+<li><strong>Sim-to-Real Transfer</strong>: Deploy to real robot</li>
+<li><strong>Complex Tasks</strong>: Multi-stage tasks with dependencies</li>
+</ul>
+<hr />
+<p><strong>Congratulations! You've completed the Physical AI &amp; Humanoid Robotics textbook.</strong> 🚀</p>
+<p>Next step: Deploy your project to GitHub and submit to the hackathon!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Physical AI & Humanoid Robotics | Created with ❤️ for Hackathon
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
