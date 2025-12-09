@@ -1,0 +1,26 @@
+﻿# Python / Virtualenv
+venv/
+.venv/
+env/
+.env
+# MkDocs build output
+site/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+# Editor folders
+.vscode/
+.idea/
+# OS files
+.DS_Store
+Thumbs.db
+# Pytest
+.pytest_cache/
+# Logs
+*.log

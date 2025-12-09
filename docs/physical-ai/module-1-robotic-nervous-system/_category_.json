@@ -1,0 +1,8 @@
+{
+  "label": "Module 1: The Robotic Nervous System",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn ROS 2, the middleware that controls robots. Master Nodes, Topics, Services, and URDF for humanoid robots."
+  }
+}
