@@ -1,0 +1,61 @@
+site_name: Physical AI & Humanoid Robotics
+site_description: Master the Future of AI in the Physical World
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - Module 1 - Robotic Nervous System:
+      - Overview: module-1-robotic-nervous-system/index.md
+      - ROS 2 Fundamentals: module-1-robotic-nervous-system/1-ros2-fundamentals.md
+      - First ROS 2 Node: module-1-robotic-nervous-system/2-first-ros2-node.md
+      - URDF Robot Description: module-1-robotic-nervous-system/3-urdf-robot-description.md
+  - Module 2 - Digital Twin:
+      - Overview: module-2-digital-twin/index.md
+      - Gazebo Simulation: module-2-digital-twin/1-gazebo-simulation.md
+      - Unity Simulation: module-2-digital-twin/2-unity-simulation.md
+  - Module 3 - AI Robot Brain:
+      - Overview: module-3-ai-robot-brain/index.md
+      - Isaac Sim: module-3-ai-robot-brain/1-isaac-sim.md
+  - Module 4 - Vision Language Action:
+      - Overview: module-4-vision-language-action/index.md
+      - VLA Systems: module-4-vision-language-action/1-vla-systems.md
+  - Capstone Project: capstone.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      toc_depth: 2
+
+repo_url: https://github.com/Alishba526/HackhathonCliBook
+repo_name: HackhathonCliBook
+edit_uri: edit/main/docs/
+
+copyright: Physical AI & Humanoid Robotics | Created with ❤️ for Hackathon
+
