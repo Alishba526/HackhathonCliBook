@@ -1,0 +1,112 @@
+[
+  {
+    "id": "module-1",
+    "title": "Robotic Nervous System - ROS 2 Fundamentals",
+    "learning_outcomes": [
+      "Understand ROS 2 architecture, nodes, topics, and services that form the communication backbone of humanoid robots",
+      "Implement your first ROS 2 nodes using Python and manage inter-process communication with publishers and subscribers",
+      "Design robot descriptions using URDF (Unified Robot Description Format) and visualize them in simulation environments"
+    ],
+    "subtopics": [
+      "ROS 2 core concepts: nodes, topics, services, and parameters",
+      "Publisher-subscriber communication patterns and message types",
+      "Service calls and client-server architecture for robot control",
+      "URDF syntax, robot structure definition, and kinematic chains",
+      "Debugging, testing, and visualization tools in ROS 2"
+    ],
+    "estimated_time_hours": 10,
+    "lab_ideas": [
+      "Build a multi-node ROS 2 system where one node publishes sensor data and another processes it",
+      "Create a URDF model of a simple 2-arm robot and visualize it with forward/inverse kinematics",
+      "Implement a simple command-response service where a robot node accepts motion commands and responds with status"
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "Digital Twin - Physics Simulation & High-Fidelity Environments",
+    "learning_outcomes": [
+      "Master physics simulation using Gazebo Harmonic to safely test robot algorithms before hardware deployment",
+      "Create high-fidelity 3D environments using Unity and integrate them with ROS 2 for realistic training",
+      "Simulate complex sensor interactions including cameras, LiDAR, and contact dynamics"
+    ],
+    "subtopics": [
+      "Gazebo physics engine, collision detection, and physics parameters",
+      "Sensor simulation: cameras, LiDAR, depth cameras, and IMU data generation",
+      "ROS 2 integration with Gazebo for real-time control and feedback",
+      "Unity3D environment creation and high-fidelity rendering for robotics",
+      "Digital twin validation and real-to-sim transfer learning"
+    ],
+    "estimated_time_hours": 8,
+    "lab_ideas": [
+      "Simulate a humanoid robot picking objects in Gazebo with realistic physics and collision",
+      "Create a Unity-based virtual environment and control a simulated robot using ROS 2 bridges",
+      "Implement sensor noise and latency in simulation to prepare algorithms for real-world conditions"
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "AI Robot Brain - Perception, Planning & NVIDIA Isaac",
+    "learning_outcomes": [
+      "Leverage NVIDIA Isaac for advanced AI perception including visual understanding and spatial reasoning",
+      "Implement VSLAM (Visual-Simultaneous Localization and Mapping) for robot navigation and environment understanding",
+      "Build integrated perception pipelines that combine vision, depth sensing, and semantic understanding"
+    ],
+    "subtopics": [
+      "NVIDIA Isaac Sim architecture and AI perception capabilities",
+      "Vision models for object detection, segmentation, and pose estimation",
+      "VSLAM algorithms, loop closure detection, and map optimization",
+      "Navigation planning with Nav2 and collision avoidance strategies",
+      "Integration of perception outputs with decision-making systems"
+    ],
+    "estimated_time_hours": 8,
+    "lab_ideas": [
+      "Implement object detection and grasping in NVIDIA Isaac Sim for a manipulation task",
+      "Build a VSLAM system that maps an indoor environment while localizing the robot",
+      "Create an autonomous navigation system that avoids obstacles and reaches goal locations"
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "Vision-Language-Action Systems - From Words to Robot Movement",
+    "learning_outcomes": [
+      "Understand Vision-Language-Action (VLA) architectures that interpret natural language commands and visual input",
+      "Integrate Large Language Models (LLMs) with robotics for semantic understanding and task planning",
+      "Build end-to-end systems where robots understand and execute commands like 'pick up the red cube'"
+    ],
+    "subtopics": [
+      "Vision transformers and multimodal embeddings for image-text understanding",
+      "Large Language Model integration and prompt engineering for robotics",
+      "Action generation and policy learning from vision-language models",
+      "Voice-to-text processing and command interpretation",
+      "Temporal reasoning and task sequencing for complex multi-step behaviors"
+    ],
+    "estimated_time_hours": 10,
+    "lab_ideas": [
+      "Build a voice-commanded robot that listens to instructions like 'move to the kitchen' and executes navigation",
+      "Implement a VLA system that takes natural language commands with visual context and generates robot actions",
+      "Create a multi-turn dialogue system where the robot asks clarifying questions and adapts to user commands"
+    ]
+  },
+  {
+    "id": "capstone",
+    "title": "Capstone Project - Autonomous Humanoid with Voice Commands",
+    "learning_outcomes": [
+      "Integrate all four modules into a complete autonomous humanoid robot system",
+      "Demonstrate end-to-end capabilities: perception, planning, and voice-based control",
+      "Deploy and evaluate a real-world applicable robotic system combining all learned concepts"
+    ],
+    "subtopics": [
+      "System architecture design for autonomous humanoid robots",
+      "Integration of ROS 2 middleware with all perception and control modules",
+      "Multi-threaded coordination of sensor processing, planning, and actuation",
+      "Safety mechanisms, error handling, and failure recovery",
+      "Evaluation metrics and performance optimization"
+    ],
+    "estimated_time_hours": 30,
+    "lab_ideas": [
+      "Build a complete autonomous humanoid that responds to voice commands to pick objects, navigate, and interact",
+      "Implement a home robot system that understands room-based commands and adapts to environment changes",
+      "Create a demonstration where the robot completes a multi-step task sequence like 'go to kitchen, pick up cup, bring it here'"
+    ]
+  }
+]
