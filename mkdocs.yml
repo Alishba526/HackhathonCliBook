@@ -17,6 +17,7 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.annotate
+  custom_dir: docs/overrides
 
 nav:
   - Home: index.md
@@ -53,9 +54,8 @@ markdown_extensions:
   - toc:
       toc_depth: 2
 
-repo_url: https://github.com/Alishba526/HackhathonCliBook
-repo_name: HackhathonCliBook
-edit_uri: edit/main/docs/
+extra_javascript:
+  - overrides/chatbot.js
 
 copyright: Physical AI & Humanoid Robotics | Created with ❤️ for Hackathon
 
